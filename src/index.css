@@ -1,13 +1,119 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root{
+    --title-font:'Rubik', sans-serif;
+    --text-font:'Roboto', sans-serif;
+    --transition: all 0.3s ease-in-out;
+    --black: rgb(36, 36, 36);
+    --green: rgb(106, 185, 41);
+    --lightgreen:rgba(106, 185, 41, 0.2);
+    --darkgreen: rgb(77, 143, 23);
+    --alpha: 0.5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin:0;
+    padding: 0;
 }
+
+body{
+    background-color:#f1f1f1;
+    font-family: var(--text-font);
+   
+}
+
+h1{
+    font-family: var(--title-font);
+    color: var(--black)
+}
+
+.main-modal{
+    border-radius: 16px;
+    margin: 0 auto;
+    margin-top: 8rem;
+    max-width: 35rem;
+    width: 90vw;
+}
+
+.search-input{
+    background-color: #ffffff;
+    border: 1px solid #f7f7f7;
+    border-radius: 8px 0 0 8px;
+    flex-grow: 1;
+    padding: 10px 8px;
+    
+}
+
+
+.search-input::placeholder{
+    color:#ccc;
+    font-size: 16px;
+    line-height: 16px;
+}
+
+textarea:focus, input:focus{
+    outline:none;
+    
+}
+
+
+.btn-submit{
+    background-color: var(--green);
+    border-radius: 0 8px 8px 0;
+    color: white;
+    font-weight: 900;
+    padding: 0 16px;  
+   
+}   
+
+.btn-submit:hover{
+    background-color: var(--darkgreen);
+}
+
+.btn-clear{
+    background-color: #ffffff;
+    border: 1px solid var(--green);
+    border-radius: 8px;
+    color: var(--green);
+    font-weight: 900;
+    padding: 9px 16px;
+    text-transform: capitalize;
+    
+}
+
+.btn-clear:hover{
+    background-color: rgba(var(--green), var(--alpha));
+
+}
+
+
+/* ----- <List/> styles ----- */
+
+.list-item{
+    border-radius: .2rem;    
+    padding: .25rem;  
+}
+
+.list-item:hover{
+    background-color:var(--lightgreen);
+    transition: var(--transition);
+}
+.item-lable{
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+.btn-fa{
+    color: var(--black);
+    width: 24px;
+}
+
+.btn-fa:hover{
+    color: #8eb0bf;
+    transition: var(--transition);
+}
+
+
+
+
