@@ -82,13 +82,13 @@ const App = () => {
        setList(list.filter((item) => item.id!==id));
    }
 
-   const editItem = (id) =>{
+//    const editItem = (id) =>{
     
-        const specificItem = list.find((item)=> item.id === id);       
-       setIsEditing(true);
-       setEditID(id);
-       setName(specificItem.title)  
-   }
+//         const specificItem = list.find((item)=> item.id === id);       
+//        setIsEditing(true);
+//        setEditID(id);
+//        setName(specificItem.title)  
+//    }
 
    useEffect(() => {
        localStorage.setItem('list', JSON.stringify(list))
@@ -106,11 +106,14 @@ const App = () => {
                             placeholder='e.g eggs'
                             value={name}
                             onChange={(e)=>setName(e.target.value)}           
-                            />
+                        />
                         <button 
-                        className='btn-submit border-0'
-                        type="submit"
-                        >{ isEditing ? 'edit' : 'Add to list'}</button>
+                            className='btn-submit border-0'
+                            type="submit"
+                        >   
+                        Add to list
+                        </button> 
+                        {/* { isEditing ? 'edit' : 'Add to list'}*/}
                         
                     </div>   
             </form>
@@ -120,7 +123,9 @@ const App = () => {
 
             {list.length > 0 && ( 
                     <div className='d-flex flex-column w-100'>
-                        <List items={list} removeItem={removeItem} editItem = {editItem}/>
+                        {/* <List items={list} removeItem={removeItem} editItem = {editItem}/> */}
+                        <List items={list} removeItem={removeItem} setName={setName} setList = {setList}/>
+
                         <button
                             className='btn-clear '
                             onClick={clearList}

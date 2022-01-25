@@ -46,6 +46,8 @@ h1{
 }
 
 
+
+
 .search-input::placeholder{
     color:#ccc;
     font-size: 16px;
@@ -98,6 +100,7 @@ textarea:focus, input:focus{
 .list-item:hover{
     background-color:var(--lightgreen);
     transition: var(--transition);
+    
 }
 .item-lable{
     font-size: 16px;
@@ -114,6 +117,14 @@ textarea:focus, input:focus{
     transition: var(--transition);
 }
 
+.btn-save{
+    color: black;
+}
+
+.btn-save:hover{
+    color: var(--green);
+    transition: var(--transition);   
+}
 
 
 
